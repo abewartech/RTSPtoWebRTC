@@ -1,0 +1,5 @@
+http://admin@10.7.0.12:34567/snap.jpg?JpegCam=0
+
+http://admin@10.7.0.12:34567/snap.jpg?JpegSize=M
+
+http://10.7.0.12:34567/user=admin_channel=1_stream=0.sdp?real_stream

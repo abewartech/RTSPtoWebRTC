@@ -1,0 +1,100 @@
+[
+    {
+        "rule": "live/*",
+        "hwaccel": "",
+        "hwaccel_format": "",
+        "model": [
+            {
+                "name": "720",
+                "video": {
+                    "filter": "",
+                    "codec": "libx264",
+                    "profile": "main",
+                    "preset": "veryfast",
+                    "tune": "zerolatency",
+                    "bitrate": 1200000,
+                    "width": 1280,
+                    "height": 720,
+                    "framerate": 24,
+                    "keyint": 2
+                },
+                "audio": {
+                    "filter": "",
+                    "code": "aac",
+                    "bitrate": 64000,
+                    "samplerate": 44100,
+                    "channels": 2
+                }
+            },
+            {
+                "name": "360",
+                "video": {
+                    "filter": "",
+                    "codec": "libx264",
+                    "profile": "baseline",
+                    "preset": "superfast",
+                    "tune": "zerolatency",
+                    "bitrate": 500000,
+                    "width": 640,
+                    "height": 360,
+                    "framerate": 20,
+                    "keyint": 2
+                },
+                "audio": {
+                    "filter": "",
+                    "codec": "aac",
+                    "bitrate": 48000,
+                    "samplerate": 44100,
+                    "channels": 1
+                }
+            }
+        ]
+    },
+    {
+        "rule": "nvidia/example",
+        "hwaccel": "cuda",
+        "hwaccel_format": "cuda",
+        "model": [
+            {
+                "name": "720",
+                "video": {
+                    "filter": "scale_cuda=1280:720",
+                    "codec": "h264_nvenc",
+                    "profile": "main",
+                    "preset": "p4",
+                    "tune": "ll",
+                    "bitrate": 1200000,
+                    "framerate": 24,
+                    "keyint": 2
+                },
+                "audio": {
+                    "filter": "",
+                    "codec": "aac",
+                    "bitrate": 64000,
+                    "samplerate": 44100,
+                    "channels": 2
+                }
+            },
+            {
+                "name": "360",
+                "video": {
+                    "filter": "scale_cuda=640:360",
+                    "codec": "h264_nvenc",
+                    "profile": "baseline",
+                    "preset": "p2",
+                    "tune": "ull",
+                    "bitrate": 500000,
+                    "framerate": 20,
+                    "keyint": 2
+                },
+                "audio": {
+                    "filter": "",
+                    "codec": "aac",
+                    "bitrate": 48000,
+                    "samplerate": 44100,
+                    "channels": 2
+                }
+            }
+        ]
+    }
+]
