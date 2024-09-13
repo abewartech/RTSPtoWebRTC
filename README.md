@@ -26,7 +26,7 @@ if you need RTSPtoWSMP4f use https://github.com/deepch/RTSPtoWSMP4f
    ```
 5. Open Browser
     ```bash
-    open web browser http://127.0.0.1:8083 work chrome, safari, firefox
+    open web browser http://127.0.0.1:8087 work chrome, safari, firefox
     ```
 
 ## Configuration
@@ -38,7 +38,7 @@ format:
 ```bash
 {
   "server": {
-    "http_port": ":8083"
+    "http_port": ":8087"
   },
   "streams": {
     "demo1": {
