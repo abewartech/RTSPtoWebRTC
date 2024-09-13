@@ -1,0 +1,5 @@
+vlc -I dummy rtsp://admin@xiaomiopenwrt.pernika.net:554/mode=real&idc=3&ids=1 --sout '#transcode{vcodec=h264,fps=20,vb=512,scale=1,acodec=none,venc=x264{aud,profile=high,level=60,keyint=15,bframes=0,ref=1,nocabac}}:duplicate{dst=std{access=livehttp{seglen=10,delsegs=true,numsegs=10,index=/var/www/live/mystream.m3u8,index-url=http://ip/live/mystream-########.ts},mux=ts{use-key-frames},dst=/var/www/live/mystream-########.ts},dst=std{access=http,mux=ts,dst=:8082/video.mp4}}'
+
+vlc -vvv -Idummy rtsp://admin@xiaomiopenwrt.pernika.net:554/mode=real&idc=3&ids=1 --sout #transcode{vcodec=MJPG,venc=ffmpeg{strict=1}}:standard{access=http{mime=multipart/x-mixed-replace;boundary=--7b3cc56e5f51db803f790dad720ed50a},mux=mpjpeg,dst=:8080/} --run-time= 60 vlc://quit;
+
+vlc-wrapper -vvv -Idummy rtsp://admin@xiaomiopenwrt.pernika.net:554/mode=real&idc=3&ids=1 --sout '#transcode{vcodec=MJPG,venc=ffmpeg{strict=1}}:standard{access=http{mime=multipart/x-mixed-replace;boundary=--7b3cc56e5f51db803f790dad720ed50a},mux=mpjpeg,dst=:8080/}' --run-time=60 vlc://quit
