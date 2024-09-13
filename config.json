@@ -7,7 +7,7 @@
     "H264_AAC": {
       "on_demand": false,
       "disable_audio": true,
-      "url": "rtsp://10.7.0.12:554/mode=real&idc=3&ids=1"
+      "url": "rtsp://admin@10.7.0.12:554/mode=real&idc=3&ids=1"
     }
   }
 }
